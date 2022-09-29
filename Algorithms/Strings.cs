@@ -1,6 +1,6 @@
-﻿namespace LeetCode;
+﻿namespace Algorithms;
 
-public static class StringTasks
+public static class Strings
 {
     // https://leetcode.com/problems/isomorphic-strings/?envType=study-plan&id=level-1
     public static bool IsIsomorphic(string s, string t)

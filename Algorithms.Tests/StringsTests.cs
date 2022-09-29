@@ -1,16 +1,16 @@
 ﻿using FluentAssertions;
 using NUnit.Framework;
 
-namespace LeetCode.Tests;
+namespace Algorithms.Tests;
 
 [TestFixture]
-public class StringTasksTests
+public class StringsTests
 {
     [TestCase("egg", "add", true)]
     [TestCase("foo", "bar", false)]
     public void IsIsomorphic_Tests(string s, string t, bool result)
     {
-        StringTasks.IsIsomorphic(s, t).Should().Be(result);
+        Strings.IsIsomorphic(s, t).Should().Be(result);
     }
 
     [TestCase("abc", "ahbgdc", true)]
@@ -20,6 +20,6 @@ public class StringTasksTests
     [TestCase("aaaaaa", "bbaaaa", false)]
     public void IsSubsequence_Tests(string s, string t, bool result)
     {
-        StringTasks.IsSubsequence(s, t).Should().Be(result);
+        Strings.IsSubsequence(s, t).Should().Be(result);
     }
 }

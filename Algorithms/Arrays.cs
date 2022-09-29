@@ -1,6 +1,6 @@
-﻿namespace LeetCode;
+﻿namespace Algorithms;
 
-public static class ArrayTasks
+public static class Arrays
 {
     // https://leetcode.com/problems/find-pivot-index/?envType=study-plan&id=level-1
     public static int PivotIndex(int[] nums)
