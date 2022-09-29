@@ -20,4 +20,20 @@ public static class Recursions
 
         return first > subMax ? first : subMax;
     }
+
+    public static int? BinarySearch(int[] arr, int search)
+    {
+        return Internal(0, arr.Length);
+        int? Internal(int left, int right)
+        {
+            var middle = (left + right) / 2;
+            if (arr[middle] == search)
+                return middle;
+            
+            if (left >= right)
+                return null;
+
+            return arr[middle] > search ? Internal(left, middle - 1) : Internal(middle + 1, right);
+        }
+    }
 }

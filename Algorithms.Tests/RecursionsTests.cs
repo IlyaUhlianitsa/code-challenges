@@ -21,4 +21,12 @@ public class RecursionsTests
     {
         Recursions.Max(nums).Should().Be(result);
     }
+    
+    [TestCase(new[] { 1, 2, 3, 4, 5, 6 }, 3, 2)]
+    [TestCase(new[] { 1, 2, 3, 4, 5, 6 }, 5, 4)]
+    [TestCase(new[] { 1, 2, 3 }, -1, null)]
+    public void BinarySearch_Tests(int[] nums, int item, int? result)
+    {
+        Recursions.BinarySearch(nums, item).Should().Be(result);
+    }
 }
