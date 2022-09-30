@@ -29,4 +29,10 @@ public class RecursionsTests
     {
         Recursions.BinarySearch(nums, item).Should().Be(result);
     }
+    
+    [TestCase(new[] { 3, 7, 2, 9, 14, 1 }, new[] { 1, 2, 3, 7, 9, 14 })]
+    public void QuickSort_Tests(int[] nums, int[] result)
+    {
+        Recursions.QuickSort(nums).Should().Equal(result);
+    }
 }

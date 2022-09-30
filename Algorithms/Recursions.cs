@@ -36,4 +36,16 @@ public static class Recursions
             return arr[middle] > search ? Internal(left, middle - 1) : Internal(middle + 1, right);
         }
     }
+
+    public static int[] QuickSort(int[] arr)
+    {
+        if (arr.Length < 2)
+            return arr;
+        
+        var first = arr[0];
+        var left = arr.Where(x => x < first).ToArray();
+        var right = arr.Where(x => x > first).ToArray();
+
+        return QuickSort(left).Concat(new []{first}).Concat(QuickSort(right)).ToArray();
+    }
 }
