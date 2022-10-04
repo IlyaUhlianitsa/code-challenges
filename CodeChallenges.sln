@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms", "Algorithms\Al
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms.Tests", "Algorithms.Tests\Algorithms.Tests.csproj", "{DEA6F7D8-E3B6-46FF-A560-38153CB86FE8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interviews.Tests", "Interviews.Tests\Interviews.Tests.csproj", "{9A999700-74D1-4C33-AC9B-B5B032BCA7D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{DEA6F7D8-E3B6-46FF-A560-38153CB86FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEA6F7D8-E3B6-46FF-A560-38153CB86FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEA6F7D8-E3B6-46FF-A560-38153CB86FE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A999700-74D1-4C33-AC9B-B5B032BCA7D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A999700-74D1-4C33-AC9B-B5B032BCA7D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A999700-74D1-4C33-AC9B-B5B032BCA7D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A999700-74D1-4C33-AC9B-B5B032BCA7D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,4 +1,6 @@
-﻿namespace Algorithms;
+﻿using System.Text;
+
+namespace Algorithms;
 
 public static class Strings
 {
@@ -43,5 +45,19 @@ public static class Strings
         }
 
         return true;
+    }
+    
+    // https://leetcode.com/problems/reverse-only-letters/
+    public static string ReverseOnlyLetters(string s)
+    {
+        var stack = new Stack<char>();
+        foreach (var c in s)
+            if (char.IsLetter(c))
+                stack.Push(c);
+
+        var sb = new StringBuilder();
+        foreach (var c in s) sb.Append(char.IsLetter(c) ? stack.Pop() : c);
+
+        return sb.ToString();
     }
 }

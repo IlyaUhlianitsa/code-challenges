@@ -22,4 +22,13 @@ public class StringsTests
     {
         Strings.IsSubsequence(s, t).Should().Be(result);
     }
+    
+    
+    [TestCase("ab-cd", "dc-ba")]
+    [TestCase("a-bC-dEf-ghIj", "j-Ih-gfE-dCba")]
+    public void ReverseOnlyLetters_Tests(string str, string result)
+    {
+        Strings.ReverseOnlyLetters(str).Should().Be(result);
+    }
+
 }
