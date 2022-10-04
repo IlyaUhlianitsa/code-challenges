@@ -52,11 +52,14 @@ public static class Strings
     {
         var stack = new Stack<char>();
         foreach (var c in s)
+        {
             if (char.IsLetter(c))
                 stack.Push(c);
+        }
 
         var sb = new StringBuilder();
-        foreach (var c in s) sb.Append(char.IsLetter(c) ? stack.Pop() : c);
+        foreach (var c in s) 
+            sb.Append(char.IsLetter(c) ? stack.Pop() : c);
 
         return sb.ToString();
     }
