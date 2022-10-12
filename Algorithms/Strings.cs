@@ -25,12 +25,12 @@ public static class Strings
     public static bool IsSubsequence(string s, string t)
     {
         var index = 0;
-        for (var i = 0; i < s.Length; i++)
+        foreach (var l in s)
         {
             var found = false;
             while (index < t.Length)
             {
-                if (t[index] == s[i])
+                if (t[index] == l)
                 {
                     found = true;
                     index++;
@@ -47,6 +47,30 @@ public static class Strings
         return true;
     }
     
+    // https://leetcode.com/problems/is-subsequence/?envType=study-plan&id=level-1
+    public static bool IsSubsequence2(string s, string t)
+    {
+        if (s.Length > t.Length)
+            return false;
+        if (s.Length == 0)
+            return true;
+
+        var subsequenceIndex = 0;
+
+        foreach (var t1 in t)
+        {
+            if (s[subsequenceIndex] == t1)
+            {
+                subsequenceIndex++;
+            }
+
+            if (subsequenceIndex == s.Length)
+                return true;
+        }
+
+        return false;
+    }
+
     // https://leetcode.com/problems/reverse-only-letters/
     public static string ReverseOnlyLetters(string s)
     {

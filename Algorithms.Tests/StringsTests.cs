@@ -18,11 +18,25 @@ public class StringsTests
     [TestCase("acb", "ahbgdc", false)]
     [TestCase("b", "c", false)]
     [TestCase("aaaaaa", "bbaaaa", false)]
+    [TestCase("aaaaaa", "bba", false)]
+    [TestCase("", "ahbgdc", true)]
     public void IsSubsequence_Tests(string s, string t, bool result)
     {
         Strings.IsSubsequence(s, t).Should().Be(result);
     }
     
+    [TestCase("abc", "ahbgdc", true)]
+    [TestCase("b", "abc", true)]
+    [TestCase("axc", "ahbgdc", false)]
+    [TestCase("acb", "ahbgdc", false)]
+    [TestCase("b", "c", false)]
+    [TestCase("aaaaaa", "bbaaaa", false)]
+    [TestCase("aaaaaa", "bba", false)]
+    [TestCase("", "ahbgdc", true)]
+    public void IsSubsequence2_Tests(string s, string t, bool result)
+    {
+        Strings.IsSubsequence2(s, t).Should().Be(result);
+    }
     
     [TestCase("ab-cd", "dc-ba")]
     [TestCase("a-bC-dEf-ghIj", "j-Ih-gfE-dCba")]
