@@ -27,4 +27,12 @@ public class ArraysTests
     {
         Arrays.SelectionSort(nums).Should().Equal(result);
     }
+    
+    [TestCase(new[] { 3, 7, 2, 9, 14, 1 }, 5, new[] { 3 })]
+    [TestCase(new[] { 3, 7, 2, 9, 14, 1 }, 3, new[] { 3, 7, 2 })]
+    [TestCase(new[] { 3, 7, 2, 9, 14, 1 }, 1, new[] { 3, 7, 2, 9, 14 })]
+    public void FilterLast_Tests(int[] source, int n, int[] result)
+    {
+        Arrays.FilterLast(source, n).Should().Equal(result);
+    }
 }

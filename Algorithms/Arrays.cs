@@ -63,4 +63,26 @@ public static class Arrays
 
         return nums;
     }
+    
+    /// <summary>
+    /// Реализовать функцию FilterLast которая возвращает все элементы исходной последовательности без последних N элементов.
+    /// Исходную последовательность нельзя перечислять более одного раза и хранить целиком в памяти.
+    /// Обратите внимание, что длина входящей последовательности заранее не известна
+    /// (т.е. обращение source.Count() вызывает перечисление элементов последовательности)
+    /// Реализуйте поточный однопроходный алгоритм
+    /// Число n сильно меньше длины последовательности
+    /// Можно использовать дополнительная память для хранения небольшого числа элементов
+    /// </summary>
+    public static IEnumerable<T> FilterLast<T>(IEnumerable<T> source, int n)
+    {
+        var queue = new Queue<T>(n);
+        var enumerator = source.GetEnumerator();
+        while (enumerator.MoveNext())
+        {
+            queue.Enqueue(enumerator.Current);
+
+            if (queue.Count == n + 1)
+                yield return queue.Dequeue();
+        }
+    }
 }
